@@ -17,7 +17,7 @@
 
 static NSString *ServerAddress = @"42.96.177.233:8082";
 //http://42.96.177.233:8082/shopSales/
-static NSString *baseUrl = @"http://120.27.115.125:8081/";
+static NSString *baseUrl = @"http://120.27.115.125:8081/shopxx/";
 
 static AFHTTPResponseSerializer *responseSerializer;
 
