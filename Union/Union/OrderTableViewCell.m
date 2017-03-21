@@ -328,12 +328,12 @@ static UIFont *nameLabelFont;
     }
     
     [attriString addAttribute:NSForegroundColorAttributeName
-                        value:(id)[UIColor colorWithRed:80.f/255 green:80.f/255 blue:80.f/255 alpha:1].CGColor
+                        value:[UIColor colorWithRed:80.f/255 green:80.f/255 blue:80.f/255 alpha:1]
                         range:NSMakeRange(0, 5)];
     UIColor *red = UN_RedColor;
     
     [attriString addAttribute:NSForegroundColorAttributeName
-                        value:(id)red.CGColor
+                        value:red
                         range:NSMakeRange(5, attriString.length-5)];
     self.totalLabel.attributedText = attriString;
     
