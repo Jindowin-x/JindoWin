@@ -37,6 +37,7 @@
     // Do any additional setup after loading the view.
     
     if (self.addressInfo) {
+        NSLog(@"%d",self.addressInfo.sex);
         self.navigationItem.title = @"修改送餐地址";
     }else{
         self.navigationItem.title = @"添加送餐地址";
@@ -473,6 +474,9 @@
 //    [UNUserDefaults saveAdressInfo:self.addressInfo];
     
     if ([self.navigationItem.title isEqualToString:@"添加送餐地址"]) {
+        
+        NSLog(@"%d",self.addressInfo.sex);
+        
         [BYToastView showToastWithMessage:@"正在添加收货地址..."];
         [UNUrlConnection addReceiveAddressWithAddressInfo:self.addressInfo complete:^(NSDictionary *resultDic, NSString *errorString) {
             if (errorString) {
@@ -490,6 +494,9 @@
             }
         }];
     }else{
+        
+        NSLog(@"%d",self.addressInfo.sex);
+        
         if (!self.addressInfo.addressID || [self.addressInfo.addressID isEqualToString:@""]) {
             [BYToastView showToastWithMessage:@"收货地址错误,请退出重试"];
             return;

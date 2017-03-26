@@ -1355,7 +1355,9 @@ static float BottomAreaHeight = 45.f;
                 //todo test
                 totalFee = 0.01;
                 [UNUrlConnection alipayPayWithMoneyYuan:totalFee orderSN:sn complete:^(NSDictionary *result) {
-                    [(AppDelegate *)[UIApplication sharedApplication].delegate handleAliPayCallBackWithResult:result];
+                    
+                    [(AppDelegate *)[UIApplication sharedApplication].delegate
+                     handleAliPayCallBackWithResult:result];
                 }];
                 return;
             }else if (payType == OrderPaymentTypeWechat){

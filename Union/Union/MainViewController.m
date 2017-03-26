@@ -191,6 +191,9 @@
             [BYToastView showToastWithMessage:errorString];
             return;
         }
+        
+        NSLog(@"%@",resultDic);
+        
         NSDictionary *messageDic = resultDic[@"message"];
         NSString *typeString = messageDic[@"type"];
         if (typeString && [typeString isKindOfClass:[NSString class]] && [typeString isEqualToString:@"success"]) {
@@ -227,7 +230,6 @@
         imag.frame = (CGRect){WIDTH(topCarouselScroller)*i,0,WIDTH(topCarouselScroller),HEIGHT(topCarouselScroller)};
         
         NSString *imagePath = topCarouselDataArray[i][@"path"];
-        imagePath = [UNUrlConnection replaceUrl:imagePath];
         UIImage *immmmmmage = [UIImage imageNamed:imagePath];
         if (immmmmmage) {
             imag.image = immmmmmage;

@@ -1264,7 +1264,7 @@
 				TargetAttributes = {
 					B898116F1BF2375A00180D76 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = U4K468UT7Z;
+						DevelopmentTeam = B7HC8PN59W;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1564,13 +1564,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = U4K468UT7Z;
+				DEVELOPMENT_TEAM = B7HC8PN59W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Union/BaiduMapSDK2.9.1",
 					"$(PROJECT_DIR)/Union/AliPay",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Union/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = Union/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1579,7 +1580,7 @@
 					"$(PROJECT_DIR)/Union",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.union.UnionHoc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.union.Union;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1593,13 +1594,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = U4K468UT7Z;
+				DEVELOPMENT_TEAM = B7HC8PN59W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Union/BaiduMapSDK2.9.1",
 					"$(PROJECT_DIR)/Union/AliPay",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Union/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = Union/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1608,7 +1610,7 @@
 					"$(PROJECT_DIR)/Union",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.union.UnionHoc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.union.Union;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
