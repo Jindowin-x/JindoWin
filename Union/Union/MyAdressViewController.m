@@ -77,6 +77,8 @@
 
 -(void)getAllReceiverAddress{
     [UNUrlConnection getAllReceiverListComplete:^(NSDictionary *resultDic, NSString *errorString) {
+        
+        
         NSArray *array = resultDic[@"content"];
         if ([array isKindOfClass:[NSArray class]] && array && array.count != 0) {
             contentDataArray = [NSMutableArray array];
@@ -96,6 +98,8 @@
                 if (sex) {
                     if (![sex isKindOfClass:[NSNull class]] && [sex isEqualToString:@"female"]) {
                         sexInt = 1;
+                    }else{
+                        sexInt = 0;
                     }
                 }
                 
