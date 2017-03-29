@@ -415,12 +415,12 @@ typedef NS_ENUM(NSUInteger, CashSearchType) {
         yueLabelString = [NSString stringWithFormat:@"￥%.1f",num];
     }
     [attriString addAttribute:NSForegroundColorAttributeName
-                        value:(id)[UIColor colorWithRed:80.f/255 green:80.f/255 blue:80.f/255 alpha:1].CGColor
+                        value:[UIColor colorWithRed:80.f/255 green:80.f/255 blue:80.f/255 alpha:1]
                         range:NSMakeRange(0, 3)];
     UIColor *red = [UIColor redColor];
     
     [attriString addAttribute:NSForegroundColorAttributeName
-                        value:(id)red.CGColor
+                        value:red
                         range:NSMakeRange(3, attriString.length-3)];
     totalRecordNumberLabel.attributedText = attriString;
     self.yueLabel.text = yueLabelString;
