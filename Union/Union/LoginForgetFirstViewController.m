@@ -266,6 +266,7 @@ static int countDown = 0;
     }
     if (countDown != 1) {
         [getCodeButton setTitleColor:RGBAColor(200, 200, 200, 1) forState:UIControlStateNormal];
+        getCodeButton.titleLabel.text = [NSString stringWithFormat:@"%@ %02d",preString,countDown-1];
         [getCodeButton setTitle:[NSString stringWithFormat:@"%@ %02d",preString,countDown-1] forState:UIControlStateNormal];
         countDown = countDown - 1;
         [self performSelector:@selector(codeButtonCountDownAnimated) withObject:nil afterDelay:1.f];

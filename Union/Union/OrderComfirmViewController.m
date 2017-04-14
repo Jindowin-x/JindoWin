@@ -189,7 +189,7 @@ static float BottomAreaHeight = 45.f;
     contentoffset += HEIGHT(addressAreaView);
     
     UIView *paymentView = [[UIView alloc] init];
-    paymentView.frame = (CGRect){0,contentoffset,WIDTH(contentView),noteLabelHeight+40*4};
+    paymentView.frame = (CGRect){0,contentoffset,WIDTH(contentView),noteLabelHeight+40*3};
     paymentView.backgroundColor = contentView.backgroundColor;
     [contentView addSubview:paymentView];
     
@@ -279,31 +279,31 @@ static float BottomAreaHeight = 45.f;
     aliPaymentSepLineView.backgroundColor = RGBAColor(200, 200, 200, 0.5);
     [aliPayButton addSubview:aliPaymentSepLineView];
     
-    UIButton *wechatPayButton = [[UIButton alloc] init];
-    wechatPayButton.frame = (CGRect){0,noteLabelHeight+40*3,WIDTH(paymentView),40};
-    wechatPayButton.backgroundColor = paymentView.backgroundColor;
-    wechatPayButton.tag = 3;
-    [paymentView addSubview:wechatPayButton];
-    [wechatPayButton addTarget:self action:@selector(paymentGatewayChanged:) forControlEvents:UIControlEventTouchUpInside];
-    
-    wechatPaymentSelectImageView = [[UIImageView alloc] init];
-    wechatPaymentSelectImageView.image = [UIImage imageNamed:@"unselected"];
-    wechatPaymentSelectImageView.frame = (CGRect){15,(HEIGHT(wechatPayButton)-22)/2,22,22};
-    wechatPaymentSelectImageView.tag = 192;
-    [wechatPayButton addSubview:wechatPaymentSelectImageView];
-    
-    UILabel *wechatPaymentLabel = [[UILabel alloc] init];
-    wechatPaymentLabel.frame = (CGRect){47,0,WIDTH(wechatPayButton)-10-52,HEIGHT(wechatPayButton)};
-    wechatPaymentLabel.textColor = RGBColor(100, 100, 100);
-    wechatPaymentLabel.textAlignment = NSTextAlignmentLeft;
-    wechatPaymentLabel.font = Font(14);
-    wechatPaymentLabel.text = @"微信支付";
-    [wechatPayButton addSubview:wechatPaymentLabel];
-    
-    UIView *wechatmentSepLineView = [[UIView alloc] init];
-    wechatmentSepLineView.frame = (CGRect){0,HEIGHT(wechatPayButton)-0.5,WIDTH(wechatPayButton),0.5};
-    wechatmentSepLineView.backgroundColor = RGBAColor(200, 200, 200, 0.5);
-    [wechatPayButton addSubview:wechatmentSepLineView];
+//    UIButton *wechatPayButton = [[UIButton alloc] init];
+//    wechatPayButton.frame = (CGRect){0,noteLabelHeight+40*3,WIDTH(paymentView),40};
+//    wechatPayButton.backgroundColor = paymentView.backgroundColor;
+//    wechatPayButton.tag = 3;
+//    [paymentView addSubview:wechatPayButton];
+//    [wechatPayButton addTarget:self action:@selector(paymentGatewayChanged:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    wechatPaymentSelectImageView = [[UIImageView alloc] init];
+//    wechatPaymentSelectImageView.image = [UIImage imageNamed:@"unselected"];
+//    wechatPaymentSelectImageView.frame = (CGRect){15,(HEIGHT(wechatPayButton)-22)/2,22,22};
+//    wechatPaymentSelectImageView.tag = 192;
+//    [wechatPayButton addSubview:wechatPaymentSelectImageView];
+//    
+//    UILabel *wechatPaymentLabel = [[UILabel alloc] init];
+//    wechatPaymentLabel.frame = (CGRect){47,0,WIDTH(wechatPayButton)-10-52,HEIGHT(wechatPayButton)};
+//    wechatPaymentLabel.textColor = RGBColor(100, 100, 100);
+//    wechatPaymentLabel.textAlignment = NSTextAlignmentLeft;
+//    wechatPaymentLabel.font = Font(14);
+//    wechatPaymentLabel.text = @"微信支付";
+//    [wechatPayButton addSubview:wechatPaymentLabel];
+//    
+//    UIView *wechatmentSepLineView = [[UIView alloc] init];
+//    wechatmentSepLineView.frame = (CGRect){0,HEIGHT(wechatPayButton)-0.5,WIDTH(wechatPayButton),0.5};
+//    wechatmentSepLineView.backgroundColor = RGBAColor(200, 200, 200, 0.5);
+//    [wechatPayButton addSubview:wechatmentSepLineView];
     
     contentoffset += HEIGHT(paymentView);
     

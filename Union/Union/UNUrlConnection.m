@@ -15,9 +15,9 @@
 
 @implementation UNUrlConnection
 
-static NSString *ServerAddress = @"120.27.115.125:8081";
+static NSString *ServerAddress = @"120.27.115.125";
 //http://42.96.177.233:8082/shopSales/
-static NSString *baseUrl = @"http://120.27.115.125:8081/shopxx/";
+static NSString *baseUrl = @"http://120.27.115.125/";
 
 static AFHTTPResponseSerializer *responseSerializer;
 
@@ -625,8 +625,6 @@ static AFHTTPResponseSerializer *responseSerializer;
     
     [paramsDic setObject:addressInfo.name forKey:@"consignee"];
     [paramsDic setObject:addressInfo.sex==0?@"male":@"female" forKey:@"sex"];
-    
-    
     
     [paramsDic setObject:addressInfo.mapAdress forKey:@"areaName"];
     [paramsDic setObject:addressInfo.detailAdress forKey:@"address"];

@@ -252,7 +252,7 @@
     phoneField.textColor = RGBColor(100, 100, 100);
     phoneField.font = Font(15);
     phoneField.tag = 100;
-    phoneField.delegate = self;
+    phoneField.keyboardType = UIKeyboardTypeNumberPad;
     phoneField.returnKeyType = UIReturnKeyDone;
     phoneField.placeholder = @"配送员联系您的方式";
     [phoneField setAutocapitalizationType:UITextAutocapitalizationTypeNone];

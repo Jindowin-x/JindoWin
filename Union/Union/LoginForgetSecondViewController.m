@@ -249,14 +249,17 @@
     }
     
     [UNUrlConnection forgetPassword:self.loginName password:passwordString complete:^(NSDictionary *resultDic, NSString *errorString) {
+        
+        
         NSDictionary *messageDic = resultDic[@"message"];
+        
         NSString *typeString = messageDic[@"type"];
         if (typeString && [typeString isKindOfClass:[NSString class]] && [typeString isEqualToString:@"success"]) {
             [BYToastView showToastWithMessage:@"密码更新成功,请重新登录"];
             [self.navigationController popToRootViewControllerAnimated:YES];
             return;
         }
-        [BYToastView showToastWithMessage:@"密码更新失败,请重试"];
+        [BYToastView showToastWithMessage:messageDic[@"content"]];
         return;
     }];
 }

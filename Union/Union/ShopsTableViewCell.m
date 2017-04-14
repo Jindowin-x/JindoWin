@@ -193,6 +193,27 @@ static float sourceLabelHeight = 16;
     //    deliveryNumberLabel.backgroundColor = [UIColor yellowColor];
     
     businessStateLabel.frame = (CGRect){X(ratingView),BOTTOM(ratingView)+7,68,businessStateLabelHeight};
+    
+   
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+//    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+//    
+//    
+//    NSInteger dataSub = [[NSTimeZone systemTimeZone] secondsFromGMT];
+//    
+//    NSDate *beginTime = [[formatter dateFromString:self.shopInfo.beginTime] dateByAddingTimeInterval:dataSub];
+//    NSDate *endTime = [[formatter dateFromString:self.shopInfo.endTime] dateByAddingTimeInterval:dataSub];
+//    NSDate *nowDate = [[NSDate date] dateByAddingTimeInterval:dataSub] ;
+//    if (nowDate.timeIntervalSinceNow < endTime.timeIntervalSince1970) {
+//        businessStateLabel.hidden = NO;
+//        businessStateLabel.backgroundColor = UN_GreenColor;
+//        businessStateLabel.text = @"商家营业中";
+//    }else{
+//        businessStateLabel.hidden = NO;
+//        businessStateLabel.backgroundColor = RGBColor(200, 200, 200);
+//        businessStateLabel.text = @"商家休息中";
+//    }
+    
     if (self.shopInfo.businessState == ShopInfoBusinessStateOpen) {
         businessStateLabel.hidden = NO;
         businessStateLabel.backgroundColor = UN_GreenColor;
